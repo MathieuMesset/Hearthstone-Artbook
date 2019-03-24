@@ -35,7 +35,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="280dp"
                 android:orientation="horizontal"
-                android:padding="50dp">
+                android:padding="20dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="10dp">
 
 
                 <ImageView
@@ -47,14 +49,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="177dp"
-                    android:layout_margin="8dp"
+                    android:layout_margin="4dp"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/aa_card_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="2dp"
                         android:text="Card Name"
                         android:textSize="20sp"
                         android:textStyle="bold"
@@ -64,7 +66,7 @@
                         android:id="@+id/aa_classe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="2dp"
                         android:text="Classe"
                         android:textStyle="bold"
                         android:textColor="@color/White"/>
@@ -73,7 +75,7 @@
                         android:id="@+id/aa_artist"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="2dp"
                         android:text="Artist"
                         android:textStyle="bold"
                         android:textColor="@color/White"/>
@@ -82,9 +84,9 @@
                         android:id="@+id/aa_flavor"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginBottom="1dp"
                         android:text="Flavor:"
                         android:textStyle="bold"
                         android:textColor="@color/White"/>
