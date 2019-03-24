@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         listCards = new ArrayList<>();
         recyclerView = findViewById(R.id.recycler_view_id);
+        getSupportActionBar().hide();
         jsonrequest();
     }
 
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                         card.setArtist(jsonObject.getString("artist"));
                         card.setFlavor(jsonObject.getString("flavor"));
                         card.setId(jsonObject.getString("id"));
+                        card.setClasse(jsonObject.getString("cardClass"));
                         listCards.add(card);
 
                     } catch (JSONException e) {

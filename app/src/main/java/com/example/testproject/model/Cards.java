@@ -6,15 +6,17 @@ public class Cards {
     private String Name;
     private String Flavor;
     private String Artist;
+    private String Classe;
 
     public Cards() {
     }
 
-    public Cards(String id, String name, String flavor, String artist) {
+    public Cards(String id, String name, String flavor, String artist,String classe) {
         Id = id;
         Name = name;
         Flavor = flavor;
         Artist = artist;
+        Classe = classe;
     }
 
     public String getId() {
@@ -33,6 +35,10 @@ public class Cards {
         return Artist;
     }
 
+    public String getClasse(){
+        return Classe;
+    }
+
 
     public void setId(String id) {
         Id = id;
@@ -48,5 +54,9 @@ public class Cards {
 
     public void setArtist(String artist) {
         Artist = artist;
+    }
+
+    public void setClasse(String classe){
+        Classe = classe;
     }
 }
