@@ -11,7 +11,7 @@ public class Cards {
     public Cards() {
     }
 
-    public Cards(String id, String name, String flavor, String artist,String classe) {
+    public Cards(String id, String name, String flavor, String artist, String classe) {
         Id = id;
         Name = name;
         Flavor = flavor;
@@ -35,7 +35,7 @@ public class Cards {
         return Artist;
     }
 
-    public String getClasse(){
+    public String getClasse() {
         return Classe;
     }
 
@@ -56,7 +56,7 @@ public class Cards {
         Artist = artist;
     }
 
-    public void setClasse(String classe){
+    public void setClasse(String classe) {
         Classe = classe;
     }
 }
