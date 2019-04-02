@@ -17,6 +17,7 @@ import com.example.testproject.activities.CardActivity;
 import com.example.testproject.model.Cards;
 import com.example.testproject.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
@@ -96,6 +97,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             img_thumbnail = itemView.findViewById(R.id.thumbnail);
 
         }
+    }
+
+    public void filterList(ArrayList<Cards> filteredList){
+        mData = filteredList;
+        notifyDataSetChanged();
     }
 
 }

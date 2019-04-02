@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 
 import com.android.volley.Cache;
 import com.android.volley.NetworkResponse;
@@ -43,7 +46,38 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler_view_id);
         getSupportActionBar().hide();
         jsonrequest();
+
+        EditText editText = findViewById(R.id.edit_text);
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                filter(editable.toString());
+            }
+        });
+
     }
+
+    private void filter(String text) {
+        ArrayList<Cards> filteredList = new ArrayList<>();
+
+        for (Cards card : listCards) {
+            if (card.getName().toLowerCase().contains(text.toLowerCase()) || card.getClasse().toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(card);
+            }
+        }
+        setuprecyclerview(filteredList);
+    }
+
 
     private void jsonrequest() {
 
@@ -105,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     cacheEntry.responseHeaders = response.headers;
                     final String jsonString = new String(response.data,
-                            HttpHeaderParser.parseCharset(response.headers,"UTF-8"));
+                            HttpHeaderParser.parseCharset(response.headers, "UTF-8"));
                     return Response.success(new JSONArray(jsonString), cacheEntry);
                 } catch (UnsupportedEncodingException | JSONException e) {
                     return Response.error(new ParseError(e));
@@ -137,9 +171,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void setuprecyclerview(List<Cards> listCards) {
 
-        RecyclerViewAdapter myadapter = new RecyclerViewAdapter(this, listCards);
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(this, listCards);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(myadapter);
+        recyclerView.setAdapter(recyclerViewAdapter);
 
     }
+
+
 }
