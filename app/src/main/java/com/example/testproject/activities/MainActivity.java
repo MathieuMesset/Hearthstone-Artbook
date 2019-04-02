@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     cacheEntry.responseHeaders = response.headers;
                     final String jsonString = new String(response.data,
-                            HttpHeaderParser.parseCharset(response.headers));
+                            HttpHeaderParser.parseCharset(response.headers,"UTF-8"));
                     return Response.success(new JSONArray(jsonString), cacheEntry);
                 } catch (UnsupportedEncodingException | JSONException e) {
                     return Response.error(new ParseError(e));
