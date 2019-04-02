@@ -17,8 +17,8 @@
             android:id="@+id/collapsingtoolbar_id"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:contentScrim="?attr/colorPrimary"
             android:background="@drawable/hs_image"
+            app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
@@ -34,10 +34,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="280dp"
-                android:orientation="horizontal"
-                android:padding="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="45dp"
-                android:layout_marginLeft="10dp">
+                android:orientation="horizontal"
+                android:padding="20dp">
 
 
                 <ImageView
@@ -58,9 +58,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:text="Card Name"
+                        android:textColor="@color/White"
                         android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/White"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/aa_classe"
@@ -68,8 +68,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:text="Classe"
-                        android:textStyle="bold"
-                        android:textColor="@color/White"/>
+                        android:textColor="@color/White"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/aa_artist"
@@ -77,8 +77,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:text="Artist"
-                        android:textStyle="bold"
-                        android:textColor="@color/White"/>
+                        android:textColor="@color/White"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/aa_flavor"
@@ -88,8 +88,8 @@
                         android:layout_marginRight="1dp"
                         android:layout_marginBottom="1dp"
                         android:text="Flavor:"
-                        android:textStyle="bold"
-                        android:textColor="@color/White"/>
+                        android:textColor="@color/White"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -106,8 +106,8 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5dp"
         android:background="@drawable/card_background"
+        android:padding="5dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <ImageView
