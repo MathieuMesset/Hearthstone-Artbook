@@ -14,11 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="4dp"
+        android:drawableLeft="@drawable/ic_search_custom_24dp"
+        android:drawablePadding="4dp"
+        android:hint="search"
         android:inputType="text"
         android:textColor="@color/colorAccent"
-        android:textColorHighlight="@color/Black" />
+        android:textColorHint="@color/colorAccentTransparent" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view_id"
