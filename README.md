@@ -59,7 +59,8 @@ Cette application affiche une liste des cartes du jeu *Hearthstone* utilisant l'
  - **Gestuelle** permettant de retourner à la liste en balayant l'écran vers la droite.
 
 
-![](https://media.giphy.com/media/5mWKLFZEaS4P6Zbb7i/giphy.gif)
+![](https://media.giphy.com/media/Qf97DTl3iaiSGbZNxn/giphy.gif)
+
 
 
 
