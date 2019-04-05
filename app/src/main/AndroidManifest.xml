@@ -13,7 +13,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activities.CardActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SlidrActivityTheme"></activity>
         <activity
             android:name=".activities.MainActivity"
             android:screenOrientation="portrait">

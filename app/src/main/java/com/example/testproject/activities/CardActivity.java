@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.testproject.R;
+import com.r0adkll.slidr.Slidr;
 
 public class CardActivity extends AppCompatActivity {
 
@@ -18,6 +19,7 @@ public class CardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_card);
 
         getSupportActionBar().hide();
+        Slidr.attach(this);
 
 
         String name = getIntent().getExtras().getString("card_name");
